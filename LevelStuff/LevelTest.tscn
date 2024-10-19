@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://e7fdexif62rw"]
+
+[ext_resource type="Script" path="res://Scripts/MazeGenerator.gd" id="1_tds28"]
+[ext_resource type="PackedScene" uid="uid://dvt13d5aynk7j" path="res://TileMaps/TwoColoredTileMap.tscn" id="2_urv1m"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tds28")
+
+[node name="TwoColoredTileMap" parent="." instance=ExtResource("2_urv1m")]
