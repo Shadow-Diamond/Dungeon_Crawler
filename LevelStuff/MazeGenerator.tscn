@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dundekcblc07v"]
+
+[ext_resource type="Script" path="res://Scripts/MazeGenerator.gd" id="1_0rv64"]
+[ext_resource type="PackedScene" uid="uid://bsbl6qd6fxfbf" path="res://TileMaps/DungeonTheme.tscn" id="2_47fi3"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_0rv64")
+
+[node name="DungeonLayout" parent="." instance=ExtResource("2_47fi3")]
