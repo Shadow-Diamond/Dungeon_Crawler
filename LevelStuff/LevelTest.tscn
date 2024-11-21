@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dqal0pvhkwy7g" path="res://Assets/Player.tscn" id="3_trnhi"]
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(1, 0)
 script = ExtResource("1_xga2j")
 
 [node name="DungeonLayout" parent="." instance=ExtResource("3_18yqu")]

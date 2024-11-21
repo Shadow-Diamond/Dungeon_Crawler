@@ -1,14 +1,14 @@
 extends Node2D
 
 func _ready():
-	#coins(GameManager.mapSize())
-	coins([20,20])
+	coins(GameManager.mapSize())
 
 
 func coins(mapSize):
 	var tileX = mapSize[0]
 	var tileY = mapSize[1]
 	var numCoins = randi_range(25, 150)
+	print("Spawning ", numCoins, " coins")
 	var coin = preload("res://Assets/Coin.tscn")
 	for i in numCoins:
 		var coinInstance = coin.instantiate()

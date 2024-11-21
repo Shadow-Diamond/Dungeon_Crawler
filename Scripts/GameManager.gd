@@ -5,6 +5,7 @@ var score = 0
 
 func collectedCoin():
 	score += 1
+	print("Gathered Coin. Score is ", score)
 
 func getScore():
 	return score
@@ -13,6 +14,7 @@ func reset():
 	score = 0
 
 func loseCoins():
+	print("Oh no, I lost some coins")
 	score -= randi_range(1,5)
 
 # Functions that deal with level setup
@@ -61,3 +63,4 @@ func mapSize():
 			size = [38,38]
 		96,97,98,99:
 			size = [39,39]
+	return size

@@ -8,7 +8,5 @@ func loot():
 
 func _on_area_2d_body_entered(body):
 	if body.has_method("player"):
-		#GameManager.collectedCoin()
-		queue_free()
-	if body.has_method("loot"):
+		GameManager.collectedCoin()
 		queue_free()

@@ -7,7 +7,7 @@ func _ready():
 	$AnimatedSprite2D.play("FrontIdle")
 	set_z_index(100)
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	player_movement()
 
 func player_movement():

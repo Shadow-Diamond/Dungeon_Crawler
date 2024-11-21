@@ -321,8 +321,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aeyxt"]
-size = Vector2(13, 4)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1x7fc"]
+radius = 8.0
+height = 24.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c6fjv"]
 radius = 8.0
@@ -339,8 +340,8 @@ animation = &"FrontIdle"
 frame_progress = 0.132802
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 17)
-shape = SubResource("RectangleShape2D_aeyxt")
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_1x7fc")
 
 [node name="Hitbox" type="Area2D" parent="."]
 
