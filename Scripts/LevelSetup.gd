@@ -3,7 +3,7 @@ extends Node2D
 func _ready():
 	coins(GameManager.mapSize())
 
-
+# Coin Generation
 func coins(mapSize):
 	var tileX = mapSize[0]
 	var tileY = mapSize[1]

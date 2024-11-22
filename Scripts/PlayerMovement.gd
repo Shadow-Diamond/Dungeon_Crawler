@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 const SPEED = 100
 var current_dir = "none"
+var numCoinsMentioned = false
 
 func _ready():
 	$AnimatedSprite2D.play("FrontIdle")
@@ -11,7 +12,27 @@ func _physics_process(_delta):
 	player_movement()
 
 func player_movement():
-	if Input.is_action_pressed("up"):
+	if Input.is_action_pressed("up") and Input.is_action_pressed("left"):
+		current_dir = "up"
+		play_anim(1)
+		velocity.x = -SPEED/2
+		velocity.y = -SPEED/2
+	elif Input.is_action_pressed("up") and Input.is_action_pressed("right"):
+		current_dir = "up"
+		play_anim(1)
+		velocity.x = SPEED/2
+		velocity.y = -SPEED/2
+	elif Input.is_action_pressed("down") and Input.is_action_pressed("left"):
+		current_dir = "down"
+		play_anim(1)
+		velocity.x = -SPEED/2
+		velocity.y = SPEED/2
+	elif Input.is_action_pressed("down") and Input.is_action_pressed("right"):
+		current_dir = "down"
+		play_anim(1)
+		velocity.x = SPEED/2
+		velocity.y = SPEED/2
+	elif Input.is_action_pressed("up"):
 		current_dir = "up"
 		play_anim(1)
 		velocity.x = 0
